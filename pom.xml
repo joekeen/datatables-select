@@ -10,24 +10,24 @@
     
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
-    <artifactId>WEBJAR_ID</artifactId>
-    <version>UPSTREAM_VERSION-SNAPSHOT</version>
-    <name>WEBJAR_NAME</name>
-    <description>WebJar for WEBJAR_NAME</description>
+    <artifactId>datatables-select</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <name>DataTables Select</name>
+    <description>WebJar for DataTables Select</description>
     <url>http://webjars.org</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.version>UPSTREAM_VERSION</upstream.version>
-        <upstream.url>UPSTREAM_ZIP_URL</upstream.url>
+        <upstream.version>1.0.0</upstream.version>
+        <upstream.url>https://github.com/DataTables/Select/archive/1.0.0.zip</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${project.version}</destDir>
         <requirejs>
             {
                 "paths": {
-                    "WEBJAR_ID": "MAIN_JS"
+                    "datatables-select": "js/dataTables.select"
                 },
                 "shim": {
-                    "WEBJAR_ID": ["DEP_ID"]
+                    "datatables-select": ["jquery", "datatables"]
                 }
             }
         </requirejs>
@@ -35,32 +35,37 @@
 
     <developers>
         <developer>
-            <id>YOUR_ID</id>
-            <name>YOUR_NAME</name>
-            <email>YOUR_EMAIL</email>
+            <id>joekeen</id>
+            <name>Joe Keen</name>
+            <email>joe@keen.id.au</email>
         </developer>
     </developers>
 
     <licenses>
         <license>
-            <name>UPSTREAM_LICENSE_NAME</name>
-            <url>UPSTREAM_LICENSE_URL</url>
+            <name>MIT</name>
+            <url>http://datatables.net/license/mit</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
 
     <scm>
-        <url>http://github.com/webjars/WEBJAR_ID</url>
-        <connection>scm:git:https://github.com/webjars/WEBJAR_ID.git</connection>
-        <developerConnection>scm:git:https://github.com/webjars/WEBJAR_ID.git</developerConnection>
+        <url>http://github.com/webjars/datatables-select</url>
+        <connection>scm:git:https://github.com/webjars/datatables-select.git</connection>
+        <developerConnection>scm:git:https://github.com/webjars/datatables-select.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
     
     <dependencies>
         <dependency>
             <groupId>org.webjars</groupId>
-            <artifactId>ANOTHER_WEBJAR_ARTIFACT_ID</artifactId>
-            <version>ANOTHER_WEBJAR_ARTIFACT_VERSION</version>
+            <artifactId>jquery</artifactId>
+            <version>2.1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>datatables</artifactId>
+            <version>1.10.7</version>
         </dependency>
     </dependencies>
     
